@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHI TIẾT SẢN PHẨM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <div class="header-image">
+            <img src="./promote-header2.jpg" alt="">
+        </div>
+    
+        <div class="address-scroller">
+        <marquee behavior="scroll" direction="left">
+            <a href="#" style="outline: none; text-decoration: none; color:#fff;">
+                TPHCM:273 Đ. An Dương Vương Quận 5|105 Bà Huyện Thanh Quan Quận 3| 4 Đ. Tôn Đức Thắng Quận 1
+            </a>
+        </marquee>
+    </div>
+    <div class="header_container">
+        <nav class="navigation">
+            <h2 onclick="window.location.href='index.html'">TrungHung.com</h2>
+            <div id="searching">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <span class="searching-button">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <button>Tìm Kiếm</button>
+                </span>
+            </div>
+            <div id="product-button">SẢN PHẨM</div>
+            <div id="addtocart" onclick="window.location.href='addtocart.html'">
+                <span><ion-icon name="cart-outline"></ion-icon></span>
+                
+            </div>
+            <div id="login-phrase">
+                <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                <div id="login-words">
+                    <p>ĐĂNG KÝ</p>
+                    <p>ĐĂNG NHẬP</p>
+                </div>
+            </div>
+            
+        </nav>
+    </div>
+</header>
+
+<div class="detail-product-container">
+    <div class="rows">
+        <div class="left-side">
+            <img src="./image/laptopASUS_zenbook14.webp" alt="">
+        </div>
+        <div class="right-side">
+            <h2>Laptop ASUS Zenbook 14 OLED UX3402VA KM068W</h2>
+            <p id="detail-price">25.990.000đ</p>
+            <div id="addtocart-button">
+                <P>MUA NGAY</P>
+            </div>
+            <div class="detail-des">
+                <p><ion-icon name="checkmark-outline"></ion-icon>Bảo hành chính hãng 12 tháng</p>
+                <p><ion-icon name="checkmark-outline"></ion-icon>Hỗ trợ đổi mới trong 7 ngày</p>
+                <p><ion-icon name="checkmark-outline"></ion-icon>Windows bản quyền tích hợp</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-structure">
+        <div style="font-size:30px;background-color: white;">THÔNG SỐ KỸ THUẬT :</div>
+        <img src="image/pro_info/asus zenbook 14.png" alt="">
+    </div>
+</div>
+<script src="shoppingCart.js" async></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

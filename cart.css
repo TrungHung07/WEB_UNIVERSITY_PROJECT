@@ -1,0 +1,32 @@
+.cart-container{
+    position: relative;
+    top:162px;
+    height:700px;
+    display:block;
+    background-color: white;
+    display: block;
+}
+
+
+.cart-rows {
+    display:flex;
+    justify-content: space-between;
+    width:700px;
+}
+
+.cart-column{
+    padding-right:50px;     
+    border-bottom: 1px solid black;
+    width:100px;
+    
+}
+
+.cart-column img{
+    width:70px;
+    height: 70px;
+}
+
+.price-cart{
+    position:relative;
+    left:50px;
+}
