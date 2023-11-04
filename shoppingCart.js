@@ -1,11 +1,16 @@
-const product_item = document.querySelectorAll(".pro");
-const btn=document.querySelectorAll("button");
-
+const product_item = document.querySelectorAll(".product");
+document.addEventListener('DOMContentLoaded', function(){
+    // the code
+    //make AJAX request when button is clicked
+    var buttons = document.querySelectorAll(".cart_button");
+    // console.log("button ne: ",buttons);
+  });
+const btn=document.querySelectorAll(".cart_button");
 
 btn.forEach(function(button,index){
     button.addEventListener('click',function(event){
         var btnItem = event.target;
-        var product=btnItem.parentElement;
+        var product=btnItem.parentElement.parentElement.parentElement;
         var product_img=product.querySelector("img").src;
         var product_name =product.querySelector("span").innerText;
         var product_price=product.querySelector(".price").innerText;
@@ -20,7 +25,7 @@ function addcart(product_img,product_name,product_price){
 
     var cartItem=document.querySelectorAll("tbody tr");
     for(var i=0;i<cartItem.length;i++){
-        var productName=document.querySelectorAll(".title");
+        var productName=document.querySelectorAll(".title_cart");
         console.log(productName[i]);
         if(productName[i].innerHTML===product_name){
             alert("Sản phẩm của bạn đã có trong giỏ hàng.");
@@ -30,7 +35,7 @@ function addcart(product_img,product_name,product_price){
 
     var addcontent=
     `
-        <td style="display: flex;align-items: center;"><img style="width:70px;" src="${product_img}" alt=""><span class="title">${product_name}</span></td>
+        <td style="display: flex;align-items: center;"><img style="width:70px;" src="${product_img}" alt=""><span class="title_cart">${product_name}</span></td>
         <td><p><span class="prices">${product_price}</span></p></td>
         <td><input class="input_row" style="width:40px;outline: none;" type="number" value="1" min="1"></td>
         <td><span style="cursor:pointer" class="delete-button">XÓA</span></td>
@@ -53,7 +58,6 @@ function cartTotal(){
         var productPrice=productPrice_text.replaceAll('đ','').replaceAll('.','');
         var total_int=inputValue*productPrice;
         totalALL+=total_int;
-        console.log(totalALL);
     }
     var total_cart=document.getElementsByClassName('price-total')[0];
     var total_cart_span=total_cart.querySelector('span');

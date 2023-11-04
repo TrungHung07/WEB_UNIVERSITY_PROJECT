@@ -1,42 +1,53 @@
-const slides=document.getElementsByClassName('slide');
-let slideIndex=1;
+let http=new XMLHttpRequest();
+//open json file
+http.open('get','data.json',true);
+//send the request: 
+http.send();
 
 
-const showslide=function(currentIndex){
-if(currentIndex<1){
-    slideIndex=slides.length;
-}
-if(currentIndex>=slides.length){
-    slideIndex=1;
-}
-for(let i =0 ;i<slides.length;i++){
-    slides[i].style.display ="none";
-}
-slides[slideIndex-1].style.display="block";
-}
-
-const goPrev=function(){
-    showslide(slideIndex--);
-}
-
-const goNext=function(){
-    showslide(slideIndex++);
-}
-
-showslide(slideIndex);
-
-const product_button = document.querySelector('#product-button');
-// const section_p2=document.querySelector('.section-p2');
 
 
-// product_button.addEventListener("click",function(){
-//     section_p2.classList.add('pop-up');
-// })
+/////////////////////////////////////////////
+   
 
 
-const addtocartButton =document.getElementById('addtocart');
-const addtocart_container = document.getElementsByClassName('addtocart-container')[0];
-addtocartButton.addEventListener('click',function(){
-    addtocart_container.display='block';
-})
+/////////////////////////////////////////////////////////////////
 
+http.onload=function(){
+    if(this.readyState==4 && this.status==200){
+
+        let products=JSON.parse(this.responseText);
+        let output="";
+        let product_container=document.querySelector(".products");
+        for(let item of products){
+            output=`
+        
+            <div class="product" id="${item.category}">
+                <img src="${item.image}">
+                <div class="des-contaner">
+                    <div class="title">${item.title}</div>
+                    <div class="price"><span>${item.price}<span><span>đ</span></div>
+                    <div class="cart_button"><ion-icon name="cart-outline"></ion-icon></div>
+                </div>
+            <div>
+            `
+        
+        product_container.innerHTML+=output;
+    }
+    var cards=document.querySelectorAll(".product");
+    // console.log(cards);
+    cards.forEach(function(card){
+        card.classList.add("hide");
+    })
+
+    filterProduct("ALL");
+    
+    }
+    
+}    
+
+
+
+
+
+//-----------------------PAGINATION------------------------------/
