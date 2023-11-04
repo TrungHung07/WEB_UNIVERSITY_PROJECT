@@ -3,115 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAPTOP</title>
+    <title>TRUNGHUNG.COM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
-            <div class="header-image">
-                <img src="./promote-header2.jpg" alt="">
+        <div class="header-image">
+            <img src="./promote-header2.jpg" alt="">
+        </div>
+    
+        <div class="address-scroller">
+        <marquee behavior="scroll" direction="left">
+            <a href="#" style="outline: none; text-decoration: none; color:#fff;">
+                TPHCM:273 Đ. An Dương Vương Quận 5|105 Bà Huyện Thanh Quan Quận 3| 4 Đ. Tôn Đức Thắng Quận 1
+            </a>
+        </marquee>
+    </div>
+    <div class="header_container">
+        <nav class="navigation">
+            <h2 onclick="window.location.href='index.html'">TrungHung.com</h2>
+            <div id="searching">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <span class="searching-button">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <div>Tìm kiếm</div>
+                    
+                </span>
             </div>
-        
-            <div class="address-scroller">
-            <marquee behavior="scroll" direction="left">
-                <a href="#" style="outline: none; text-decoration: none; color:#fff;">
-                    TPHCM:273 Đ. An Dương Vương Quận 5|105 Bà Huyện Thanh Quan Quận 3| 4 Đ. Tôn Đức Thắng Quận 1
-                </a>
-            </marquee>
-        </div>
-        <div class="header_container">
-            <nav class="navigation">
-                <h2 onclick="window.location.href='index.html'">TrungHung.com</h2>
-                <div id="searching">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                    <span class="searching-button">
-                        <ion-icon name="search-outline"></ion-icon>
-                        <div>Tìm kiếm</div>
-                        
-                    </span>
+            <div id="product-button" onclick="window.location.href='sanpham.html'">SẢN PHẨM</div>
+            <div id="addtocart" >
+                <span style="font-size:15px;"><ion-icon name="cart-outline"></ion-icon></span>
+                <br>
+            <span class="total-price-value"></span>
+            </div>
+            <div id="login-phrase">
+                <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                <div id="login-words">
+                    <p>ĐĂNG KÝ</p>
+                    <p>ĐĂNG NHẬP</p>
                 </div>
-                <div id="product-button" onclick="window.location.href='sanpham.html'">SẢN PHẨM</div>
-                <div id="addtocart" >
-                    <span style="font-size:15px;"><ion-icon name="cart-outline"></ion-icon></span>
-                    <br>
-                <span class="total-price-value"></span>
-                </div>
-                <div id="login-phrase">
-                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <div id="login-words">
-                        <p>ĐĂNG KÝ</p>
-                        <p>ĐĂNG NHẬP</p>
-                    </div>
-                </div>
-                
-            </nav>
-        </div>
-    </header>
-
-<section class="main-section">
-
-    <div class="slider-container">
-        <div class="slider">
-       <img src="./slider-pic-1.jpg" class="slide" alt="slide1">
-       <img src="./slider-pic-2.jpg" class="slide" alt="slide2">
-       <img src="./slider-pic-3.jpg" class="slide" alt="slide3">
-       <img src="./slider-pic-4.jpg" class="slide" alt="slide4">
-       </div>
-       <button class="prev-button" onclick="goPrev()">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        </button>
-       <button class="next-button" onclick="goNext()">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+            </div>
+            
+        </nav>
     </div>
 
-</section>
+    <div class="pro-menu">
+        <div class="menu-container">
+            <div class="filter-button" id="ALL" onclick="filterProduct('ALL')">ALL</div>
+            <div class="filter-button" id="ACER" onclick="filterProduct('ACER')">ACER</div>
+            <div class="filter-button" id="ASUS" onclick="filterProduct('ASUS')">ASUS</div>
+            <div class="filter-button" id="HP" onclick="filterProduct('HP')">HP</div>
+            <div class="filter-button" id="DELL" onclick="filterProduct('DELL')">DELL</div>
+            <div class="filter-button" id="LENOVO" onclick="filterProduct('LENOVO')">LENOVO</div>
+            <div class="filter-button" id="MSI" onclick="filterProduct('MSI')">MSI</div>
+        </div>
+    </div>
 
+</header>
 
-
-    <section id="product" class="section-p1">
-        <h2>SẢN PHẨM</h2>
-        <div class="products-container">
-            <div class="pro">
-                <img onclick="window.location.href='product_detail.html'" src="./image/laptopASUS_zenbook14.webp" alt="">
-                <div onclick="window.location.href='product_detail.html'" class="des">
-                    <span>Laptop ASUS Zenbook 14 OLED UX3402VA KM068W</span>
-                    <div class="price">24.990.000đ</div>
-                </div>
-                <button>thêm vào giỏ hàng </button>
-            </div>
-
-            <div class="pro">
-                <img src="./image/acer predator.webp" alt="">
-                <div class="des">
-                    <span>Laptop gaming Acer Predator Helios Neo PHN16 71 779X</span>
-                    <div class="price">39.990.000đ</div>
-                </div>
-                <button>Thêm vào giỏ hàng</button>
-            </div>
-
-            <div class="pro">
-                <img src="./image/hp pavillon 15.webp" alt="">
-                <div class="des">
-                    <span>Laptop HP Pavilion 15 eg3091TU 8C5L2PA</span>
-                    <div class="price">22.990.000đ</div>
-                </div>
-                <button>Thêm vào giỏ hàng</button>
-            </div>
-
-            <div class="pro">
-                <img src="./image/MSI Modern 15.webp" alt="">
-                <div class="des">
-                    <span>Laptop MSI Modern 15 B12M 628VN</span>
-                    <div class="price">13.890.000đ</div>
-                </div>
-                <button>Thêm vào giỏ hàng</button>
-            </div>
-
-            
-    </section>
-
-
+    <div class="products"></div>
+   
+    <div class="pre-next-span">
+    </div>
 
 
     <section class="cart">
@@ -136,12 +90,21 @@
         </div>
     </form>
     </section>
-    <script src="shoppingCart.js" async></script>
 
 
+    <ul class="listPage">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 
-    <script src="script.js" async ></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+<script src="pagination.js" defer></script>
+<script src="render.js"></script>
+<!-- <script src="script.js" defer></script>  -->
+<script src="searching_filter.js" defer></script>
+<script src="shoppingCart.js" defer></script>
 </html>

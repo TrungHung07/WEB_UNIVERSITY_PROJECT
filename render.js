@@ -1,4 +1,6 @@
-[
+
+
+var data=[
     {
         "number":"1",
         "image":"image/laptopASUS_zenbook14.webp",
@@ -82,3 +84,24 @@
         "category":"ASUS"
     }
 ]
+
+
+
+    
+        // let mainContainer = document.getElementById("myData");
+        for (let i = 0; i < data.length; i++) {
+            let div = `
+            <div class="product" id="${data[i].category}">
+                <img src="${data[i].image}">
+                <div class="des-contaner">
+                    <div class="title">${data[i].title}</div>
+                    <div class="price"><span>${data[i].price}<span><span>đ</span></div>
+                    <div class="cart_button"><ion-icon name="cart-outline"></ion-icon></div>
+                </div>
+            <div>
+            `
+            document.querySelector('.products').innerHTML+=div;
+        }
+    
+
+
